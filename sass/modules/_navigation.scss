@@ -1,0 +1,55 @@
+.nav {
+	margin: 0;
+	list-style: none;
+
+	.menu-item {
+		a {
+			display: block;
+			margin-bottom: 1px;
+			padding-left: 10px;
+
+			background: $white;
+			color: $grayDark;
+			font-size: 16px;
+			line-height: 40px;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
+		&.current-menu-item,
+		&.current-menu-parent {
+			> a {
+				color: $red;
+			}
+        }	
+	}
+
+	.sub-menu {
+		display: none;
+		margin: 0;
+		list-style: none;
+
+		.menu-item {
+			a {
+				padding-left: 20px;
+				background: $grayLighter;
+			}
+		}
+	}
+}
+
+.nav-mobile {
+	position: absolute;
+	left: -250px;
+	z-index: 99;
+	display: none;
+	overflow: hidden;
+	min-height: 100%;
+	width: 250px;
+	height: auto;
+	background: $white;
+
+	@media only screen and ($media-type: $media-phone) { display: block; }
+}

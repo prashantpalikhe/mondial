@@ -1,0 +1,19 @@
+.menu-item-image {
+    @include grid(8);
+
+    line-height: 1;
+
+    @media only screen and ($media-type: $media-phone) {
+        @include grid-reset;
+
+        margin-bottom: 20px;
+    }
+}
+
+.menu-item-content {
+    @include grid(40, 1, 0);
+
+    @media only screen and ($media-type: $media-phone) {
+        @include grid-reset;
+    }
+}

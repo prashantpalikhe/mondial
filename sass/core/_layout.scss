@@ -1,0 +1,67 @@
+// =========== Layout
+
+.l-full {
+    @include grid(48, 1);
+    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+}
+.l-two-third {
+    @include grid(32, 1);
+    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+}
+.l-half {
+    @include grid(24, 1);
+    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+}
+.l-one-third {
+    @include grid(16, 1);
+    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+}
+.l-grid {
+    @include clearfix;
+    li { @include grid(16, 1); }
+}
+.l-first { clear: left; }
+
+.container {
+    @include clearfix;
+    position: relative;
+    margin: 0 10px;
+    max-width: 960px;
+}
+
+#header {
+    @include grid(48, 4, 0);
+    margin-top: 80px;
+    font-size: 20px;
+
+    a {
+        color: $white;
+    }
+
+    em {
+        color: $red;
+        font-style: normal;
+    }
+
+    @media only screen and ($media-type: $media-phone) { @include grid-reset; margin-top: 20px; margin-left: 50px;}
+}
+
+#sidebar {
+    @include grid(16, 4, 0);
+
+    @media only screen and ($media-type: $media-phone) {
+        display: none;
+        visibility: invisible;
+    }
+}
+
+#content {
+    @include clearfix;
+    margin-bottom: 80px;
+    padding: 1.25rem 1.25rem 0;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    @media only screen and ($media-type: $media-phone) { @include grid-reset; }
+    @include grid(32, 1, 0);
+}

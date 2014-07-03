@@ -1,0 +1,50 @@
+// Parent container
+.accordion {
+  margin-bottom: $margin-bottom;
+}
+
+// Group == heading + body
+.accordion-group {
+    margin-bottom: 2px;
+}
+
+.accordion-heading {
+    font-weight: bold;
+    line-height: 40px;
+
+    .accordion-toggle {
+        display: block;
+        padding: 0 10px;
+
+        background: $grayLight;
+        color: $white;
+
+        img {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+}
+
+// General toggle styles
+.accordion-toggle {
+    cursor: pointer;
+}
+
+// Inner needs the styles because you can't animate properly with any styles on the element
+.accordion-inner {
+    @include clearfix;
+
+    margin: 10px 0;
+}
+
+.collapse {
+    @include transition(height 0.35s ease);
+    position: relative;
+    overflow: hidden;
+    height: 0;
+}
+
+.collapse.in {
+    height: auto;
+}

@@ -1,0 +1,39 @@
+input[type=search] { -webkit-appearance: textfield; }
+input[type=search]::-webkit-search-decoration { -webkit-appearance: none; }
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=tel],
+input[type=url],
+textarea,
+select {
+    -webkit-appearance: none;
+    border: none;
+    color: $gray;
+    display: block;
+    font-family: $font-family;
+    font-size: inherit;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0.6em;
+    width: 100% !important;
+    @include box-shadow(0px 2px 6px rgba($black, 0.1));
+    @include transition(border 0.1s);
+    vertical-align: baseline;
+
+    &:focus {
+        outline: 0;
+        color: $grayDark;
+        @include box-shadow(0px 2px 6px rgba($black, 0.3));
+    }
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+    vertical-align: top;
+    display: block;
+}

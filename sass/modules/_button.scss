@@ -1,0 +1,31 @@
+.btn {
+	@include transition(0.25s all);
+	display: block;
+	margin-bottom: $margin-bottom;
+	padding: 8px 0;
+	width: 180px;
+	outline: none;
+	border: none;
+	background: $red;
+	color: $white;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+
+	&:hover {
+		background: darken($red, 5%);
+		color: darken($white, 5%);
+	}
+}
+
+.btn-navbar {
+	position: absolute;
+	top: 34px;
+	left: 0;
+	display: none;
+	width: 32px;
+	height: 32px;
+	background: url(../images/btn-navbar.png) 0 0 no-repeat;
+
+	@media only screen and ($media-type: $media-phone) { display: block;}
+}
