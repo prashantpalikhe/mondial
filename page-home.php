@@ -18,9 +18,9 @@ Template Name: Homepage
 
 				<!-- Carousel items -->
 				<div class="carousel-inner">
-					<div class="active item"><img src="http://lorempixel.com/580/295/food/580x295/" width="100%"></div>
-					<div class="item"><img src="http://lorempixel.com/580/295/business/580x295/" width="100%"></div>
-					<div class="item"><img src="http://lorempixel.com/580/295/transport/580x295/" width="100%"></div>
+					<div class="active item"><img src="http://placehold.it/580x295" width="100%"></div>
+					<div class="item"><img src="http://placehold.it/580x295" width="100%"></div>
+					<div class="item"><img src="http://placehold.it/580x295" width="100%"></div>
 				</div>
 
 				<!-- Carousel nav -->
