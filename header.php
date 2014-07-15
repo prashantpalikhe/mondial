@@ -16,7 +16,7 @@
         <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/touch/apple-touch-icon-57x57-precomposed.png">
         <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
 
-        <link rel="stylesheet" type="text/css" media="all" href="//mondial.palimg.com/wp-content/themes/mondial/css/screen.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="//mondial.palimg.com/wp-content/themes/petitmondial/css/screen.css" />
         <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
 
         <?php wp_head(); ?>
