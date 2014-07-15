@@ -28,7 +28,7 @@ function pm_enqueue_scripts() {
 
     wp_register_script(
         'transition',
-        get_template_directory_uri() . '/js/vendor/Bootstrap/bootstrap-transition.js',
+        '//mondial.palimg.com/wp-content/themes/mondial/js/vendor/Bootstrap/bootstrap-transition.js',
         array('jquery'),
         false,
         true
@@ -38,7 +38,7 @@ function pm_enqueue_scripts() {
 
     wp_register_script(
         'carousel',
-        get_template_directory_uri() . '/js/vendor/Bootstrap/bootstrap-carousel.js',
+        '//mondial.palimg.com/wp-content/themes/mondial/js/vendor/Bootstrap/bootstrap-carousel.js',
         array('jquery'),
         false,
         true
@@ -48,7 +48,7 @@ function pm_enqueue_scripts() {
 
     wp_register_script(
         'collapse',
-        get_template_directory_uri() . '/js/vendor/Bootstrap/bootstrap-collapse.js',
+        '//mondial.palimg.com/wp-content/themes/mondial/js/vendor/Bootstrap/bootstrap-collapse.js',
         array('jquery'),
         false,
         true
@@ -58,7 +58,7 @@ function pm_enqueue_scripts() {
 
     wp_register_script(
         'script',
-        get_template_directory_uri() . '/js/script.js',
+        '//mondial.palimg.com/wp-content/themes/mondial/js/script.js',
         array('jquery'),
         false,
         true
@@ -68,7 +68,7 @@ function pm_enqueue_scripts() {
 
     wp_register_script(
         'modal',
-        get_template_directory_uri() . '/js/vendor/Bootstrap/bootstrap-modal.js',
+        '//mondial.palimg.com/wp-content/themes/mondial/js/vendor/Bootstrap/bootstrap-modal.js',
         array('jquery'),
         false,
         true

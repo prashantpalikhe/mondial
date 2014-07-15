@@ -16,14 +16,14 @@
         <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/touch/apple-touch-icon-57x57-precomposed.png">
         <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
 
-        <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/screen.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="//mondial.palimg.com/wp-content/themes/mondial/css/screen.css" />
         <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
 
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
 
-        <?php 
+        <?php
             wp_nav_menu(
                 array(
                     'menu'           => 'Menu',
@@ -32,7 +32,7 @@
                     'menu_class'     => 'nav nav-mobile',
                     'menu_id'        => 'myPanel'
                 )
-            )            
+            )
         ?>
 
         <div class="container">
@@ -44,7 +44,7 @@
             </header>
 
             <aside id="sidebar">
-                <?php 
+                <?php
                     wp_nav_menu(
                         array(
                             'menu'           => 'Menu',
