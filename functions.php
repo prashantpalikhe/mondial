@@ -805,4 +805,19 @@ function next_posts_attributes(){
 }
 add_filter('next_posts_link_attributes', 'next_posts_attributes');
 
+/* Removes the Contact Form 7 scripts and styles from all pages */
+remove_action( 'wp_enqueue_scripts', 'wpcf7_enqueue_scripts' ); // Prevents the scripts from loading on all pages
+remove_action( 'wp_enqueue_scripts', 'wpcf7_enqueue_styles' ); // Prevents the styles from loading on all pages
+
+/* Adds the Contact Form 7 scripts and styles to the appropriate pages */
+add_action( 'wp_enqueue_scripts', 'new_cf7_loader' ); // Loads the scripts and styles on the appropriate page(s)
+
+/* Load the Contact Form 7 scripts and styles on the appropriate pages */
+function new_cf7_loader() {
+    if (is_page('reserveren')) {
+        wpcf7_enqueue_scripts();
+        wpcf7_enqueue_styles();
+    }
+}
+
 ?>
