@@ -8,6 +8,7 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 
 function sight_setup() {
+    cleanup_head();
 	update_option('thumbnail_size_w', 290);
     update_option('thumbnail_size_h', 290);
     add_image_size( 'mini-thumbnail', 50, 50, true );
@@ -16,6 +17,28 @@ function sight_setup() {
 }
 add_action( 'init', 'sight_setup' );
 
+function cleanup_head() {
+     // category feeds
+    remove_action( 'wp_head', 'feed_links_extra', 3 );
+    // post and comment feeds
+    remove_action( 'wp_head', 'feed_links', 2 );
+    // EditURI link
+    remove_action( 'wp_head', 'rsd_link');
+    // windows live writer
+    remove_action( 'wp_head', 'wlwmanifest_link');
+    // index link
+    remove_action( 'wp_head', 'index_rel_link');
+    // previous link
+    remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
+    // start link
+    remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+    // links for adjacent posts
+    remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+    // WP version
+    remove_action( 'wp_head', 'wp_generator');
+}
+
+
 /**
  * Loads the jquery library from Google API and theme specific javascript
  * in the website footer.
@@ -23,7 +46,7 @@ add_action( 'init', 'sight_setup' );
  */
 function pm_enqueue_scripts() {
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', '1.7.1', true);
+    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', array(), '1.7.1', true);
     wp_enqueue_script( 'jquery' );
 
     wp_register_script(
